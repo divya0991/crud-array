@@ -45,7 +45,7 @@ function createform(obj){
 }
 
 function requestDelete(id){
-   alert(id);
+   //alert(id);
    var choice =  confirm("Are you sure, you want to delete this record")
    if (choice == true) 
    {
@@ -111,8 +111,9 @@ function createForm(obj,id)
     document.getElementById('code').value=data[1];
     document.getElementById('phone').value=data[2];
     document.getElementById('email').value=data[3];
-    formString += '<div class="relative fullwidth col-xs-12"><button type="submit" name="submit" class="form-btn semibold" onclick="window.location.reload(); updateRec(' + id + ');">Update</button></div>;' 
-    document.getElementById('update').innerHTML = formstring;
+    formString += '<button type="submit" name="submit" class="form-btn semibold" onclick="window.location.reload(); updateRec(' + id + ');">Update</button>'; 
+    //alert(formString);
+    document.getElementById('kkkk').innerHTML = formString;
     
 }
 function updateRec(id)
@@ -150,7 +151,7 @@ function updateRec(id)
   }
 }
 function addrecord(){
-    alert("hello");
+    //alert("hello");
     var add = new Object();
     add.name = document.getElementById('add_name').value;
     add.code = document.getElementById('add_code').value;
