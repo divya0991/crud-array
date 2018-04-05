@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
+var port = process.env.PORT || 8000;
 var emp = [['divya','101','99999','div@gmail.com']];
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,"static")));
@@ -51,4 +52,4 @@ app.put('/put/:id',function(request, response)
     response.end();
     console.log(id);
 })
-app.listen(8000);
+app.listen(port);
